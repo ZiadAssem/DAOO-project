@@ -4,6 +4,7 @@ public class InvertTriangle {
     public static void invert() {
         
         String[][] current = new String[5][5]; //creates starting coin array
+
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4 - i; j++) {
 
@@ -16,6 +17,7 @@ public class InvertTriangle {
 
 
         String[][] goal = new String[5][5]; //creates goal array
+
         for (int i = 1; i < 5; i++) {
             for (int j=0;j<i;j++){
 
@@ -27,6 +29,7 @@ public class InvertTriangle {
             }
             
         }
+
         for (int i=0;i<4;i++) { //prints the starting array
             for (int j = 0; j < 4; j++) {
                 System.out.print(current[i][j]);
@@ -45,6 +48,7 @@ public class InvertTriangle {
                 }
             }
         }
+
         for (int i=0;i<5;i++) {
             for (int j = 0; j < 4; j++) {
                 if (current[i][j]==null) {
