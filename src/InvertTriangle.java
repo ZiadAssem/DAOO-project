@@ -1,16 +1,5 @@
 public class InvertTriangle {
-    public static void invert(int[][] x) {
-        /*
-      xxxx*
-      xxx* *
-      xx* * *
-      x* * * *
-      * * * * *
-         */
-
-    }
-
-    public static void main(String[] args) {
+    public static void invert() {
         String[][] x = new String[5][4];
         for (int i = 0; i < 4; i++) {
             for (int j=0;j<4-i;j++){
@@ -50,6 +39,11 @@ public class InvertTriangle {
             }
             System.out.println("");
         }
+
+    }
+
+    public static void main(String[] args) {
+
 
     }
 }
