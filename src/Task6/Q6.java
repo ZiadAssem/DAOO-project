@@ -1,9 +1,11 @@
 package Task6;
 
 class Q6 {
+    static int moves=0;
     private static void hanoiTower(int n, int k, String Peg_from, String temp_peg, String Peg_to) {
         if (n == 0) {
             System.out.println();
+
             return;
         }
         hanoiTower(n - 1, k, Peg_from, Peg_to, temp_peg);
@@ -16,7 +18,8 @@ class Q6 {
         int z = (int) (n + 1 - Math.round(Math.sqrt(2 * n + 1)));
         //calculation of the additional peg formula.
         if (z == 0){
-            System.out.print("Move disc " + 1  + " from " + Peg_from + " to " + Peg_to);
+            System.out.println("Move disc " + 1  + " from " + Peg_from + " to " + Peg_to);
+
             return;
         }
         hanoiTower4(z, Peg_from , Peg_to, temp_peg , temp_peg2);
@@ -26,5 +29,6 @@ class Q6 {
     public static void main(String[] args) {
         int n = 8;
         hanoiTower4(n, "Peg1", "Peg2", "Peg3", "Peg4");
+        System.out.println(Q6.moves);
     }
 }
