@@ -16,13 +16,28 @@ public class PegSolitaire {
         }
         else{
             removePeg(x,pegs);
-
         }
 
     }
 
     static void removePeg(int [] x , int pegs){
+        String[][] pattern1 = new String[1][2];
+        String[][] pattern2 = new String[1][2];
+        pattern1[0][0] = "";pattern1[0][1]="";
+        pattern2[0][0] = "";pattern2[0][1]="";
+        for(int i=0;i<x.length;i++){
+            if(legalForward(x,i)){
+                //Save pattern
 
+                moveForward(x,i);
+                pegs--;
+            }
+            else if(legalBackward(x,i)){
+
+                moveBackward(x,i);
+                pegs--;
+            }
+        }
     }
 
 
@@ -51,12 +66,12 @@ public class PegSolitaire {
         x[i - 2] = 1;
     }
 
-    static boolean legalReverseForward(int[] x, int i) {
-        return (i > 1 && x[i - 1] == 0 && x[i - 2] == 0);
+    static boolean legalForward(int[] x, int i) {
+        return (i < x.length-2 &&x[i]==1&& x[i + 1] == 1 && x[i + 2] == 0);
     }
 
-    static boolean legalReverseBackward(int[] x, int i) {
-        return (i < x.length - 2 && x[i] == 1 && x[i + 1] == 0 && x[i + 2] == 0);
+    static boolean legalBackward(int[] x, int i) {
+        return (i > 1 && x[i] == 1 && x[i - 1] == 1 && x[i - 2] == 0);
 
     }
 
