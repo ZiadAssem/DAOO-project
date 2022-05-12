@@ -1,3 +1,5 @@
+package Task3;
+
 public class KnightProblem {
     static int moves = 0;
    static char [][] chessboard= {{'b','b','b'},{'e','e','e'},{'e','e','e'},{'w','w','w'}};

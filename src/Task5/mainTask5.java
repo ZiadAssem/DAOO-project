@@ -1,3 +1,6 @@
+package Task5;
+
+import Task5.SwitchProblemV3;
 
 public class mainTask5 {
     public static void main(String[] args) {

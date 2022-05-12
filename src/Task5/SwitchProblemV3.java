@@ -1,3 +1,4 @@
+package Task5;
 
 public class SwitchProblemV3 {
     static int moves=0;

@@ -1,4 +1,4 @@
-package Task6;
+package Task2;
 import java.util.Stack;
 
 public class PegSolitaire {
@@ -9,7 +9,69 @@ public class PegSolitaire {
     static String move = "";
     static int choice = 0;
 
-    static void solve(int[] x, int holes) {
+    static void solve(int [] x,int pegs) {
+
+        if(pegs==1){
+            System.out.println("Solution found");
+        }
+        else{
+            removePeg(x,pegs);
+
+        }
+
+    }
+
+    static void removePeg(int [] x , int pegs){
+
+    }
+
+
+    static void reverseForwardMove(int[] x, int i) {
+        x[i] = 0;
+        x[i - 1] = 1;
+        x[i - 2] = 1;
+    }
+
+    static void reverseBackwardMove(int[] x, int i) {
+        x[i] = 0;
+        x[i + 1] = 1;
+        x[i + 2] = 1;
+    }
+
+
+    static void moveForward(int[] x, int i) {
+        x[i] = 0;
+        x[i + 1] = 0;
+        x[i + 2] = 1;
+    }
+
+    static void moveBackward(int[] x, int i) {
+        x[i] = 0;
+        x[i - 1] = 0;
+        x[i - 2] = 1;
+    }
+
+    static boolean legalReverseForward(int[] x, int i) {
+        return (i > 1 && x[i - 1] == 0 && x[i - 2] == 0);
+    }
+
+    static boolean legalReverseBackward(int[] x, int i) {
+        return (i < x.length - 2 && x[i] == 1 && x[i + 1] == 0 && x[i + 2] == 0);
+
+    }
+
+    public static void main(String[] args) {
+        int[] array = {1, 1, 0, 1, 1, 1,1,1};
+
+
+
+
+
+    }
+}
+
+/*
+ static void solve(int[] x, int holes) {
         boolean loop = true;
 
         while (loop) {
@@ -69,53 +131,9 @@ public class PegSolitaire {
                 }
             }
         }
-
-    }
-
-
-    static void reverseForwardMove(int[] x, int i) {
-        x[i] = 0;
-        x[i - 1] = 1;
-        x[i - 2] = 1;
-    }
-
-    static void reverseBackwardMove(int[] x, int i) {
-        x[i] = 0;
-        x[i + 1] = 1;
-        x[i + 2] = 1;
-    }
+ */
 
 
-    static void moveForward(int[] x, int i) {
-        x[i] = 0;
-        x[i + 1] = 0;
-        x[i + 2] = 1;
-    }
-
-    static void moveBackward(int[] x, int i) {
-        x[i] = 0;
-        x[i - 1] = 0;
-        x[i - 2] = 1;
-    }
-
-    static boolean legalReverseForward(int[] x, int i) {
-        return (i > 1 && x[i - 1] == 0 && x[i - 2] == 0);
-    }
-
-    static boolean legalReverseBackward(int[] x, int i) {
-        return (i < x.length - 2 && x[i] == 1 && x[i + 1] == 0 && x[i + 2] == 0);
-
-    }
-
-    public static void main(String[] args) {
-        int[] array = {0, 1, 0, 0, 0, 0,0,0};
-
-        PegSolitaire.solve(array, array.length - 1);
-
-
-
-    }
-}
    /* static boolean solve(int [] x,Stack path) {
         for (int i = 0; i < x.length; i++) {
             if (legalForward(x, i)) {

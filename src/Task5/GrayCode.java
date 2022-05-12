@@ -1,3 +1,5 @@
+package Task5;
+
 public class GrayCode {
     static int number;
     // append reverse of order n gray code to prefix string, and print
