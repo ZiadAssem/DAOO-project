@@ -1,3 +1,4 @@
+package Task5;
 
 public class SwitchProblemV3 {
     static int moves=0;
@@ -16,9 +17,9 @@ public class SwitchProblemV3 {
                 }
 
             }
-            if ( end == x.length - 2 && x[x.length - 1] == 1) {//is the second to last bit  && last bit =1
+            if ( end == x.length - 2 && x[x.length - 1] == 1&&cursor==0) {//is the second to last bit  && last bit =1
                 turn(x, x.length - 1);
-
+                cursor++;
             }
 
             turn(x, begin);
