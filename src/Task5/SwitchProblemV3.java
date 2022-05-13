@@ -98,15 +98,13 @@ public class SwitchProblemV3 {
         return 0;
     }
     public static void main(String[] args) {
-        int [] x = {1,1,1,1,1,1};
+        int [] x = {1,1,1};
+        for(int i=0;i<x.length;i++){
+            System.out.print(x[i]);
+        }
+        System.out.println();
         SwitchProblemV3.switchProblem(x,0,x.length-2);
-        for(int j=0;j<x.length;j++){
-            System.out.print(x[j]);
-        }
-        System.out.println("");
-        for (int i=0;i<x.length;i++){
-            System.out.println(x[i]);
-        }
-        System.out.println("Number of switching is " + SwitchProblemV3.moves);
+
+        System.out.println("Number of switching for "+x.length+ " switches is " + SwitchProblemV3.moves);
     }
 }
