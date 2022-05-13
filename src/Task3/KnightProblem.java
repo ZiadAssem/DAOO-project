@@ -36,9 +36,20 @@ public class KnightProblem {
 
     public static void main(String[] args){
         char [][] chessboard= {{'b','b','b'},{'e','e','e'},{'e','e','e'},{'w','w','w'}};
+        System.out.println("The is the initial configuration of the board: ");
+        for(int i=0;i<4;i++){
+            for (int j = 0;j<3;j++){
+                System.out.print(chessboard[i][j]+" ");
+            }
+            System.out.println();
+        }
+        System.out.println();
 
         KnightProblem.divide(chessboard,6);
-        System.out.println(KnightProblem.moves);
+        System.out.println("The Number of moves equals " + KnightProblem.moves);
+        System.out.println();
+
+        System.out.println("Final configuration of the board: ");
 
         for(int i=0;i<4;i++){
             for (int j = 0;j<3;j++){
