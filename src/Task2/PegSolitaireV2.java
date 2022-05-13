@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class PegSolitaireV2 {
+   static int choice = 0;
 
     public static HashMap<String, Integer> hm;
 
@@ -26,12 +27,17 @@ public class PegSolitaireV2 {
                 continue;
             }
             boolean firstHalf=false;
-            for(int j=0;j<(board.length()/2)-1;j++){
-                if (board.charAt(i)=='-'){
-                    firstHalf=true;
-                     break;
+           if(choice==0){
+            for(int j=0;j<(board.length()/2)-1;j++) {
+                if (board.charAt(i) == '-') {
+                    firstHalf = true;
+                    choice = 1;
+                    break;
+
                 }
+
             }
+           }
             if(firstHalf){
                 min=forwardSolve(board);
             }else{

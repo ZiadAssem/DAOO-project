@@ -47,7 +47,8 @@ public class InvertTriangle {
                 }
             }
         }
-
+        System.out.println();
+        System.out.println("This is the final configuration");
         for (int i=0;i<n+1;i++) { // prints resulting array
             for (int j = 0; j < n+1; j++) {
                 if (current[i][j]==null) {
@@ -62,7 +63,7 @@ public class InvertTriangle {
     }
 
     public static void main(String[] args) {
-        InvertTriangle.invert(4);
-        System.out.println(InvertTriangle.moves);
+        InvertTriangle.invert(7);
+        System.out.println("The number of coin slides (moves) equals: "+InvertTriangle.moves);
     }
 }
