@@ -1,5 +1,7 @@
 package Task4;
 
+import Task3.KnightProblem;
+
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -33,4 +35,7 @@ public class CoinProblem
         }
         System.out.println("Number of iterations equals " + iterations);
     }
-}
+    public static void main(String[] args) {
+        CoinProblem.solve();
+    }
+    }
