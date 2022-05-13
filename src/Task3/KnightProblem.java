@@ -4,21 +4,6 @@ public class KnightProblem {
     static int moves = 0;
    static int dMoves = 0;
 
-   /* static void solve(char chessboard [][]){//we will solve each two knights at a time
-        a1d2(chessboard);
-        d3a2(chessboard);
-        d1a3(chessboard);
-        a1b3(chessboard);
-        for(int i=0;i<4;i++){
-            for (int j = 0;j<3;j++){
-                System.out.print(chessboard[i][j]+" ");
-            }
-            System.out.println();
-        }
-
-    }
-*/
-
     public static void divide(char [][] chessboard,int n){
         if (n>2) {
 
@@ -120,6 +105,23 @@ public class KnightProblem {
         temp[i1][j1] = chessboard[i1][j1];
         temp [i2][j2] = chessboard [i2][j2];
     }
+
+
+   /* static void solve(char chessboard [][]){//we will solve each two knights at a time
+        a1d2(chessboard);
+        d3a2(chessboard);
+        d1a3(chessboard);
+        a1b3(chessboard);
+        for(int i=0;i<4;i++){
+            for (int j = 0;j<3;j++){
+                System.out.print(chessboard[i][j]+" ");
+            }
+            System.out.println();
+        }
+
+    }
+*/
+
 }
 
 
