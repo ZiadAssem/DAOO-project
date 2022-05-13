@@ -18,20 +18,21 @@ public class CoinProblem
 
         for (int i = 0; i < vector.size(); i++)
         {
-            while (vector.get(i) >= 2)
+            if (vector.get(i) >= 2)
             {
+                int old = vector.get(i);
+                int next = old/2;
+                old=old-2*next;
+                vector.set(i,old);
+                vector.add(next);
                 iterations++;
-                vector.set(i, (vector.get(i) - 2));
-                if (vector.size() > i + 1) //avoids out of bounds exception
-                {
-                    vector.set(i + 1, (vector.get(i + 1) + 1));
-                }
-                else vector.add(1);
+
             }
         }
-
+        int i=1;
         for (Integer integer : vector) {
-            System.out.println(integer);
+            System.out.println("Box number "+ i+ " equals "+integer);
+            i++;
         }
         System.out.println("Number of iterations equals " + iterations);
     }
