@@ -1,5 +1,3 @@
-package Task5;
-
 public class SwitchProblemV2 {
     static int moves=0;
     public static void divide(int[] x,int i,int j) {

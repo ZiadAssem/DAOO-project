@@ -18,7 +18,6 @@ public class KnightProblem {
             divide(temp2,n);
             divide(temp3,n);
             merge(temp1,temp2,temp3,chessboard);
-
             a1b3(chessboard);
         }else if(dMoves==0){
 
