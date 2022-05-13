@@ -1,6 +1,6 @@
 package Task4;
 
-import Task3.KnightProblem;
+
 
 import java.util.Scanner;
 import java.util.Vector;
