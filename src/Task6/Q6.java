@@ -1,7 +1,5 @@
 package Task6;
-//using dynamic programing
 class Q6 {
-    static int moves=0;
     private static void hanoiTower(int n, int k, String Peg_from, String temp_peg, String Peg_to) {
         if (n == 0) {
             System.out.println();
@@ -29,6 +27,5 @@ class Q6 {
     public static void main(String[] args) {
         int n = 8;
         hanoiTower4(n, "Peg1", "Peg2", "Peg3", "Peg4");
-        System.out.println(Q6.moves);
     }
 }
